@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brukerveiledning - Slik lager du ID-kort for speiderdugnad">
+    <title>Brukerveiledning - ID-kortgenerator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+
+        .help-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .help-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .help-section h2 {
+            color: #2c5f2d;
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #FFD700;
+        }
+
+        .help-section ol, .help-section ul {
+            line-height: 2;
+        }
+
+        /* Better list styling with icons */
+        .help-section ol li {
+            padding-left: 0.5rem;
+        }
+
+        .help-section ul li {
+            list-style: none;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .help-section ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2c5f2d;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .step {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #2c5f2d;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .step h3 {
+            color: #2c5f2d;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .step p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .step ul li::before {
+            content: "→";
+            color: #FFD700;
+        }
+
+        .tip {
+            background: #e8f4f8;
+            border-left: 4px solid #0066cc;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .tip strong {
+            color: #0066cc;
+        }
+
+        .warning {
+            background: #fff4e6;
+            border-left: 4px solid #ff9800;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .warning strong {
+            color: #ff9800;
+        }
+
+        .photo-example {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .photo-box {
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .photo-box ul li::before {
+            content: "•";
+            color: inherit;
+        }
+
+        .photo-good {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+        }
+
+        .photo-bad {
+            background: #ffebee;
+            border: 2px solid #f44336;
+        }
+
+        .photo-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: #2c5f2d;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #2c5f2d 0%, #1a3d1b 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .help-container {
+                padding: 1rem;
+            }
+
+            .help-section {
+                padding: 1.5rem;
+            }
+
+            .photo-example {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 1.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="help-container">
+        <a href="index.html" class="back-link">
+            <i class="bi bi-arrow-left-circle"></i> Tilbake til Hervik Dugnad
+        </a>
+
+        <div class="page-header">
+            <h1>🎯 Brukerveiledning - ID-kortgenerator</h1>
+            <p style="margin-top: 1rem; font-size: 1.1rem;">Slik lager du profesjonelle ID-kort for speiderdugnad</p>
+        </div>
+
+        <!-- Quick Start -->
+        <div class="help-section">
+            <h2>⚡ Rask start (2 minutter)</h2>
+            <ol style="line-height: 2;">
+                <li>Fyll inn speiderens navn og tropps-nummer</li>
+                <li>Skriv inn medlemsnummer (finner du i medlemsregisteret)</li>
+                <li>Last opp et godt bilde av speideren</li>
+                <li>Velg start- og sluttdato for dugnaden</li>
+                <li>Klikk "Forhåndsvis ID-kort"</li>
+                <li>Last ned ID-kortet som bilde</li>
+                <li>Del med speideren (epost, Messenger, etc.)</li>
+            </ol>
+        </div>
+
+        <!-- Step by Step -->
+        <div class="help-section">
+            <h2>📋 Steg-for-steg veiledning</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Speiderens navn</h3>
+                <p>Skriv inn speiderens fulle navn. Dette vil vises stort på ID-kortet.</p>
+                <div class="tip">
+                    <strong>💡 Tips:</strong> Kun fornavn er nok for personvern, men fullt navn ser mer profesjonelt ut.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Tropps-nummer</h3>
+                <p>Skriv inn tropps-nummer eller avdelingsnummer speideren tilhører (f.eks. "Aspirant", "Tropp 1", "Rover").</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Medlemsnummer</h3>
+                <p>Dette er speiderens unike medlemsnummer i systemet. Finner du i medlemsregisteret eller spør gruppeleder.</p>
+                <div class="warning">
+                    <strong>⚠️ Viktig:</strong> Medlemsnummeret brukes i QR-koden for å knytte bestillinger til riktig speider!
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Last opp speiderfoto</h3>
+                <p>Velg et godt bilde av speideren. Bildet behandles kun i din nettleser og lastes ALDRI opp til noen server.</p>
+
+                <div class="photo-example">
+                    <div class="photo-box photo-good">
+                        <div class="photo-icon">✅</div>
+                        <strong>Godt bilde:</strong>
+                        <ul style="text-align: left; margin-top: 0.5rem;">
+                            <li>Ansiktet er tydelig synlig</li>
+                            <li>God belysning</li>
+                            <li>Rolig bakgrunn</li>
+                            <li>Speiderdrakt (anbefalt)</li>
+                            <li>Smil! 😊</li>
+                        </ul>
+                    </div>
+                    <div class="photo-box photo-bad">
+                        <div class="photo-icon">❌</div>
+                        <strong>Unngå:</strong>
+                        <ul style="text-align: left; margin-top: 0.5rem;">
+                            <li>Uskarpt bilde</li>
+                            <li>Mørkt bilde</li>
+                            <li>Ansikt delvis skjult</li>
+                            <li>For langt unna</li>
+                            <li>Rotete bakgrunn</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    <strong>💡 Tips:</strong> Ta bildet utendørs i dagslys, eller inne ved et vindu. Sørg for at speideren står stille og ser inn i kameraet.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Velg dugnadsdatoer</h3>
+                <p>Sett start- og sluttdato for dugnaden. ID-kortet vil vise disse datoene som gyldighetsperiode.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">6</div>
+                <h3>Forhåndsvis ID-kort</h3>
+                <p>Klikk på "Forhåndsvis ID-kort" for å se hvordan det ferdige kortet blir seende ut.</p>
+                <div class="tip">
+                    <strong>💡 Tips:</strong> Sjekk at alt ser bra ut før du laster ned. Du kan justere og forhåndsvise på nytt.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">7</div>
+                <h3>Last ned ID-kort</h3>
+                <p>Klikk "Last ned ID-kort" for å lagre bildet. Filen lastes ned som PNG-bilde i høy kvalitet.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">8</div>
+                <h3>Del ID-kortet</h3>
+                <p>Send ID-kortet til speideren via:</p>
+                <ul>
+                    <li>E-post</li>
+                    <li>Messenger / WhatsApp</li>
+                    <li>SMS (hvis bildet ikke er for stort)</li>
+                    <li>Print det ut</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- How to Use Badge -->
+        <div class="help-section">
+            <h2>🎫 Hvordan bruker speideren ID-kortet?</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Vis ID-kortet</h3>
+                <p>Speideren åpner bildet på telefonen eller printer det ut og viser det til kunden.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Kunden skanner QR-koden</h3>
+                <p>Kunden bruker kameraet på telefonen sin til å skanne QR-koden på ID-kortet.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Bestillingsportal åpnes</h3>
+                <p>Kunden kommer direkte til bestillingsportalen med speiderens medlemsnummer allerede fylt ut.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Kunden handler</h3>
+                <p>Kunden velger produkter og fullfører bestillingen. Salget registreres automatisk på speideren.</p>
+            </div>
+
+            <div class="tip">
+                <strong>💡 Tips til speideren:</strong> Ha ID-kortet klart på telefonen før du ringer på døren. Det gjør det raskere og mer profesjonelt!
+            </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="help-section">
+            <h2>💡 Gode tips</h2>
+            <ul style="line-height: 2;">
+                <li><strong>Print ut ID-kort:</strong> Hvis speideren ikke har smarttelefon, print ut ID-kortet og laminer det.</li>
+                <li><strong>Lagre ID-kortet:</strong> Send en kopi til deg selv via epost som backup.</li>
+                <li><strong>Test QR-koden:</strong> Skann QR-koden selv før du sender ID-kortet til speideren.</li>
+                <li><strong>Bruk speiderdrakt:</strong> Bilde i speiderdrakt ser mer profesjonelt ut.</li>
+                <li><strong>Lag på forhånd:</strong> Lag ID-kort for alle speiderne før dugnad starter.</li>
+                <li><strong>Del instruksjoner:</strong> Send gjerne denne veiledningen til foreldrene også!</li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="help-section">
+            <h2>🆘 Trenger du hjelp?</h2>
+            <p>Hvis du har problemer eller spørsmål:</p>
+            <ul style="line-height: 2;">
+                <li>Kontakt gruppeleder eller dugnadansvarlig</li>
+                <li>Spør i speidergruppens chat</li>
+                <li>E-post: <a href="mailto:post@speiderdugnad.no" style="color: #2c5f2d; font-weight: 600;">post@speiderdugnad.no</a></li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: #2c5f2d; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+                <i class="bi bi-arrow-left-circle"></i> Tilbake til Hervik Dugnad
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 3rem; text-align: center; padding: 2rem; background: #2c5f2d; color: white;">
+        <p>&copy; 2025 Hervik Dugnad Bestillingssystem</p>
+        <p style="margin-top: 0.5rem; opacity: 0.9;">Laget med ❤️ for speiderne</p>
+    </footer>
+</body>
+</html>

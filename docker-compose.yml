@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  landing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: speiderdugnad-landing
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+
+    # For local development - uncomment to enable live reload
+    # volumes:
+    #   - ./public:/usr/share/nginx/html:ro
