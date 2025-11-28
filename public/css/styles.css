@@ -287,27 +287,38 @@ section {
   margin-left: var(--space-4);
 }
 
-/* User Icon */
-.user-icon-link {
+/* Emblem Link */
+.emblem-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: var(--primary-green);
-  font-size: 2rem;
+  margin-left: 30px;
   transition: all 0.3s ease;
-  border-radius: 50%;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 40px;
 }
 
-.user-icon-link:hover {
-  color: var(--primary-green);
-  background: var(--light-green);
+.emblem-link:hover {
   transform: scale(1.1);
+  box-shadow: var(--shadow-md);
 }
 
-.user-icon-link i {
-  line-height: 1;
+.emblem-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Stronger constraint to avoid other rules or caching from showing the full image */
+.header-content .header-actions .emblem-img,
+.emblem-link > img {
+  width: 30px !important;
+  height: 30px !important;
+  max-width: 30px !important;
+  max-height: 30px !important;
 }
 
 /* Language Switcher */
