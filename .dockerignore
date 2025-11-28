@@ -1,0 +1,25 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+!README.md
+
+# Data and source files
+data/
+dugnadspakke-*.png
+nsf-logo.png
+mistletoe.svg
+hinnaspeieder_logo.jpg
+
+# Docker files
+docker-compose.yml
+Dockerfile
+
+# Editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
