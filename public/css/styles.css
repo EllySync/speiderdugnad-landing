@@ -190,15 +190,20 @@ section {
 .header-content {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
   padding: var(--space-4) 0;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  flex: 1;
+  gap: var(--space-2);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .logo-img {
@@ -214,7 +219,8 @@ section {
 
 .nav {
   display: none;
-  gap: var(--space-6);
+  gap: var(--space-4);
+  flex-wrap: nowrap;
 }
 
 .nav a {
@@ -285,6 +291,7 @@ section {
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  margin-left: auto;
 }
 
 /* Emblem Link */
@@ -700,9 +707,9 @@ section {
     font-size: var(--text-4xl);
   }
 
-  /* Header */
+  /* Header - Compact for tablet */
   .header-content {
-    gap: var(--space-6);
+    gap: var(--space-2);
   }
 
   .menu-toggle {
@@ -711,31 +718,46 @@ section {
 
   .nav {
     display: flex;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+  }
+
+  .nav a {
+    white-space: nowrap;
+  }
+
+  .help-link .help-text {
+    display: none;
   }
 
   .logo {
-    flex: 0;
+    gap: var(--space-2);
   }
 
   .logo-img {
-    height: 48px;
+    height: 38px;
   }
 
   .logo-text {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
   }
 
   .lang-btn {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
   .lang-btn .flag {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .header-actions {
-    gap: var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .emblem-img {
+    width: 28px !important;
+    height: 28px !important;
   }
 
   /* Hero */
@@ -772,6 +794,50 @@ section {
    RESPONSIVE - DESKTOP & UP (1024px+)
    ======================================== */
 @media (min-width: 1024px) {
+  /* Header - More spacious for desktop */
+  .header-content {
+    gap: var(--space-4);
+  }
+
+  .nav {
+    gap: var(--space-6);
+    font-size: var(--text-base);
+  }
+
+  .help-link .help-text {
+    display: inline;
+  }
+
+  .logo {
+    gap: var(--space-3);
+  }
+
+  .logo-img {
+    height: 48px;
+  }
+
+  .logo-text {
+    font-size: var(--text-xl);
+  }
+
+  .lang-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lang-btn .flag {
+    font-size: 1.5rem;
+  }
+
+  .header-actions {
+    gap: var(--space-3);
+  }
+
+  .emblem-img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
   /* How It Works - Horizontal with arrows */
   .steps {
     grid-template-columns: repeat(7, 1fr);
