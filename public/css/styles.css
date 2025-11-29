@@ -190,7 +190,7 @@ section {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--space-3);
   padding: var(--space-4) 0;
 }
 
@@ -198,15 +198,16 @@ section {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  flex: 1;
 }
 
 .logo-img {
-  height: 48px;
+  height: 36px;
   width: auto;
 }
 
 .logo-text {
-  font-size: var(--text-xl);
+  font-size: var(--text-base);
   font-weight: var(--weight-bold);
   color: var(--primary-green);
 }
@@ -279,12 +280,11 @@ section {
   font-size: 1.2rem;
 }
 
-/* Header Actions (User Icon + Language Switcher) */
+/* Header Actions (Language Switcher + Emblem) */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  margin-left: var(--space-4);
+  gap: var(--space-2);
 }
 
 /* Emblem Link */
@@ -332,14 +332,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: transparent;
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: var(--text-xl);
+  font-size: var(--text-base);
 }
 
 .lang-btn:hover {
@@ -353,7 +353,7 @@ section {
 }
 
 .lang-btn .flag {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1;
 }
 
@@ -701,12 +701,41 @@ section {
   }
 
   /* Header */
+  .header-content {
+    gap: var(--space-6);
+  }
+
   .menu-toggle {
     display: none;
   }
 
   .nav {
     display: flex;
+  }
+
+  .logo {
+    flex: 0;
+  }
+
+  .logo-img {
+    height: 48px;
+  }
+
+  .logo-text {
+    font-size: var(--text-xl);
+  }
+
+  .lang-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lang-btn .flag {
+    font-size: 1.5rem;
+  }
+
+  .header-actions {
+    gap: var(--space-3);
   }
 
   /* Hero */
