@@ -181,6 +181,53 @@
             font-size: 2.5rem;
         }
 
+        /* Generator Access Section */
+        .generator-access {
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f9ff 100%);
+            border: 3px solid #0066cc;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+        }
+
+        .access-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .generator-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+        }
+
+        .generator-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, #0052a3 0%, #004080 100%);
+        }
+
+        .generator-link i {
+            font-size: 1.3rem;
+        }
+
         @media (max-width: 768px) {
             .help-container {
                 padding: 1rem;
@@ -197,6 +244,19 @@
             .page-header h1 {
                 font-size: 1.875rem;
             }
+
+            .generator-access {
+                padding: 1.5rem 1rem;
+            }
+
+            .generator-link {
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .generator-link span {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -209,6 +269,22 @@
         <div class="page-header">
             <h1>🎯 Brukerveiledning - ID-kortgenerator</h1>
             <p style="margin-top: 1rem; font-size: 1.1rem;">Slik lager du profesjonelle ID-kort for speiderdugnad</p>
+        </div>
+
+        <!-- Access Generator -->
+        <div class="generator-access">
+            <div class="access-icon">🚀</div>
+            <h2 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Kom i gang / Get Started</h2>
+            <p style="margin-bottom: 0.5rem; color: #333; font-weight: 600;">
+                🇳🇴 Følg denne lenken for å komme til ID-kortgeneratoren:
+            </p>
+            <p style="margin-bottom: 1.5rem; color: #555; font-size: 0.95rem;">
+                🇬🇧 Follow this link to access the ID badge generator:
+            </p>
+            <a href="https://badgecreator.speiderdugnad.no/" class="generator-link" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-box-arrow-up-right"></i>
+                <span>Åpne ID-kortgenerator / Open Badge Generator</span>
+            </a>
         </div>
 
         <!-- Quick Start -->
