@@ -1,0 +1,33 @@
+{
+  "products": {
+    "1": {
+      "title": { "no": "Hervik bærsaft, syltetøy og gelé – 6 produkter", "en": "Hervik berry juice, jam & jelly – 6 products" },
+      "desc": { "no": "2 typer saft og 4 typer syltetøy", "en": "2 types of juice and 4 types of jam" },
+      "alt": { "no": "Hervik pakke 1 - 6 produkter", "en": "Hervik package 1 - 6 products" }
+    },
+    "2": {
+      "title": { "no": "Hervik bærsaft, syltetøy og gelé – 9 produkter", "en": "Hervik berry juice, jam & jelly – 9 products" },
+      "desc": { "no": "4 typer saft og 5 typer syltetøy/gelé", "en": "4 types of juice and 5 types of jam/jelly" },
+      "alt": { "no": "Hervik pakke 2 - 9 produkter", "en": "Hervik package 2 - 9 products" }
+    },
+    "3": {
+      "title": { "no": "Hervik bærsaft – 3 produkter", "en": "Hervik berry juice – 3 products" },
+      "desc": { "no": "3 typer saft", "en": "3 types of juice" },
+      "alt": { "no": "Hervik pakke 3 - saft 3 produkter", "en": "Hervik package 3 - 3 juices" }
+    },
+    "4": {
+      "title": { "no": "Hervik syltetøy og gelé – 3 produkter", "en": "Hervik jam & jelly – 3 products" },
+      "desc": { "no": "3 typer syltetøy/gelé", "en": "3 types of jam/jelly" },
+      "alt": { "no": "Hervik pakke 4 - syltetøy og gelé", "en": "Hervik package 4 - jam and jelly" }
+    },
+    "5": {
+      "title": { "no": "Hervik eplejuice – 6-pakning", "en": "Hervik apple juice – 6-pack" },
+      "desc": { "no": "6-pakning eplejuice (6 x 1 L)", "en": "6-pack apple juice (6 × 1 L)" },
+      "alt": { "no": "Hervik pakke 5 - 6-pakning eplejuice", "en": "Hervik package 5 - 6-pack apple juice" }
+    }
+  },
+  "cta": {
+    "see_products": { "no": "Se alle produkter og bestill →", "en": "See all products and order →" },
+    "start_order": { "no": "Start bestilling →", "en": "Start order →" }
+  }
+}

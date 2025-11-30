@@ -7,6 +7,8 @@
 // 0. LANGUAGE SWITCHING
 // ========================================
 let currentLang = localStorage.getItem('language') || 'no';
+// Optional translations object (loaded from JSON) for key-based i18n
+let translations = {};
 
 // Set initial language on page load
 function setLanguage(lang) {
@@ -39,13 +41,52 @@ function setLanguage(lang) {
     }
   });
 
+  // Apply key-based translations if translations.json was loaded
+  try {
+    document.querySelectorAll('[data-i18n-key]').forEach(el => {
+      const key = el.getAttribute('data-i18n-key');
+      const value = getTranslationByKey(key, lang);
+      if (value) el.textContent = value;
+    });
+
+    document.querySelectorAll('img[data-i18n-alt-key]').forEach(img => {
+      const key = img.getAttribute('data-i18n-alt-key');
+      const value = getTranslationByKey(key, lang);
+      if (value) img.alt = value;
+    });
+  } catch (e) {
+    // ignore errors — fallback to data-no/data-en handled above
+  }
+
   console.log(`🌐 Language changed to: ${lang === 'no' ? 'Norwegian' : 'English'}`);
+}
+
+// Helper: look up translation by dotted key, e.g. 'products.1.title'
+function getTranslationByKey(key, lang) {
+  if (!translations || !key) return null;
+  const parts = key.split('.');
+  let node = translations;
+  for (let p of parts) {
+    if (node[p] === undefined) return null;
+    node = node[p];
+  }
+  return (node && node[lang]) ? node[lang] : null;
 }
 
 // Language button click handlers
 document.addEventListener('DOMContentLoaded', () => {
-  // Set initial language
-  setLanguage(currentLang);
+  // Try to load key-based translations first, then apply language
+  fetch('locales/translations.json')
+    .then(resp => resp.json())
+    .then(data => {
+      translations = data || {};
+      setLanguage(currentLang);
+    })
+    .catch(err => {
+      // If translations fail to load, fallback to data-no/data-en attributes
+      console.warn('Could not load translations.json:', err);
+      setLanguage(currentLang);
+    });
 
   // Add click handlers to language buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {

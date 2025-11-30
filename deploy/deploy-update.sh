@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Template deploy script. Place this on your server in the deploy path and make it executable.
+# Usage: ./deploy-update.sh <image-tag>
+
+IMAGE_TAG="$1"
+cd "$(dirname "$0")" || exit 1
+
+echo "Updating .env with: ${IMAGE_TAG}"
+echo "IMAGE=${IMAGE_TAG}" > .env
+
+echo "Pulling image and restarting containers"
+docker-compose pull || true
+docker-compose up -d --force-recreate
+
+# Optional healthcheck — uncomment to enable
+# for i in {1..12}; do
+#   if curl -fsS --max-time 3 http://localhost/ >/dev/null; then
+#     echo "Service healthy"
+#     exit 0
+#   fi
+#   sleep 5
+# done
+# echo "Healthcheck failed" >&2
+# exit 2
+
+echo "Deploy complete"
